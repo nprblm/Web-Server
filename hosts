@@ -1,0 +1,5 @@
+[servers]
+server ansible_host="{{ public_ip_server }}" ansible_connection=ssh  ansible_ssh_user="{{ lookup('env', 'TF_VAR_SERVER_USERNAME') }}" ansible_ssh_pass="{{ lookup('env', 'TF_VAR_SERVER_PWD') }}"
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
